@@ -1,0 +1,42 @@
+#alertMsg {
+    display: none;
+    width: 400px;
+    border: 1px solid #7ab2dd;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #5a7ae1;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Calibri;
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    z-index: 100000;
+}
+
+#alertMsg_info {
+    word-break: break-word;
+    padding: 2px 15px;
+    line-height: 1.6em;
+    text-align: left;
+
+}
+#alertMsg_btn1, #alertMsg_btn2 {
+    display: inline-block;
+    padding-left: 3px;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+    background: #5f88e1;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#alertMsg_btn1 cite, #alertMsg_btn2 cite {
+    line-height: 24px;
+    display: inline-block;
+    padding: 0 13px 0 10px;
+    font-style: normal;
+}
+
+

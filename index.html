@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en-US"> <![endif]-->
+<!--[if gte IE 8]><html class="ie ie8" lang="en-US"> <![endif]-->
+
+<html dir="ltr" lang="en-US">
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- Google Fonts
+        ============================================= -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Stylesheets
+        ============================================= -->
+        <link rel="stylesheet" href="{{url_for('static',filename='css/plugin.css')}}" type="text/css" />
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}" type="text/css" />
+        <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}" type="text/css" />
+        <link rel="stylesheet" href="{{url_for('static',filename='css/base.css')}}" type="text/css" />
+        <!-- JavaScripts
+        ============================================= -->
+
+
+
+     <link rel="stylesheet" href="../static/css/alert.css">
+     <script type="text/javascript" src="../static/js/alert.js"></script>
+
+
+
+        <script type="text/javascript" src="{{url_for('static',filename='js/jquery.js')}}"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <title>Home</title>
+    </head>
+
+    <body onLoad="hideTotal()">
+        <div id="preloader">
+            <div id="status">
+                <img src="{{url_for('static',filename='img/LOGO1.jpg')}}" alt="" />
+            </div>
+        </div>
+
+        <!-- MAIN WRAPPER
+        ============================================= -->
+        <div id="main-wrapper" class="clearfix">
+
+            <!-- HEADER
+            ============================================= -->
+            <header id="header" class="clearfix">
+                <div class="site-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="top-header clearfix">
+                                <div class="logo col-md-4">
+                                    <a href="index.html">
+                                        <img src="{{url_for('static',filename='../static/img/LOGO1.jpg')}}" alt="" />
+                                    </a>
+                                </div>
+
+                                <div class="info col-md-8">
+                            <ul>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    <p>
+                                        <span class="heading">Call Us</span>
+                                        <span>17361731825</span>
+                                    </p>
+                                </li>
+                                <li class="last">
+                                    <i class="fa fa-envelope"></i>
+                                    <p>
+                                        <span class="heading">Email Us</span>
+                                        <span>2879904227@qq.com</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                                <div class="slide-buttons">
+                                    <button id="slide-buttons" class="slide-button icon icon-navicon">click</button>
+                                </div>
+                            </div>
+
+                            <script>
+                                function jump(){
+                                    var data="Hi!";
+                                     $.ajax({
+                                           url:"{{ url_for('test') }}",
+                                            type:"post",
+                                            data:data,
+                                            dataType: 'json',
+                                            processData:false,
+                                            contentType:false,
+                                            success:function(data){
+                                               alertMsg(data.Information);
+                                           }
+                                     })
+                                }
+                                 </script>
+
+                            <div class="navigation">
+                                <div class="main-menu">
+                                    <ul class="menu">
+                                        <li>VOICE RECOGNITION:</li>
+                                    </ul>
+                                    <div class="right-section">
+                                        <div class="VoiceInput">
+                                            <input type="text" name="s" placeholder="请对我说：我想去xx展览">
+                                        </div>
+                                    </div>
+                                    <div class="right2-section">
+                                        <div class="RecVoic">
+                                            <button onclick="jump()" id='record' class="button" style="display:block;margin:0 auto "></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Mobile
+                ============================================= -->
+                <nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
+                    <button class="c-menu__close icon icon-close"></button>
+
+                    <div class="search-input">
+                        <input type="text" name="s" placeholder="Type some text in here..." class="untouched">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+
+                    <ul class="slide-menu-items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <p>
+                                    <span class="heading">Opening Hours</span>
+                                    <span>Mon - Sat: 09.00 - 17.00</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <span class="heading">Call Us</span>
+                                    <span>(064) 234 54876</span>
+                                </p>
+                            </li>
+                            <li class="last">
+                                <p>
+                                    <span class="heading">Email Us</span>
+                                    <span>logitrans@domain.com</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div id="slide-overlay" class="slide-overlay"></div>
+                <!-- Menu Mobile End -->
+            </header>
+            <!-- HEADER END -->
+
+            <!-- SLIDER START
+            ============================================= -->
+            <section id="slider" class="home-slider clearfix">
+        <div class="slider-wrapper">
+            <div class="flexslider clearfix">
+                <ul class="slides">
+                    <li class="slide-item clearfix" style="background-image: url(../static/img/4.jpg);">
+                        <div class="flex-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="caption-wrap">
+                                        <div class="caption wow fadeInUp" data-wow-delay="0.5s">
+                                            <h1 >TEAM LAB</h1>
+                                        </div>
+                                        <div class="caption wow fadeIn" data-wow-delay="1s">
+                                            <p>LIGHTS AND SHADOW</p>
+                                        </div>
+                                        <div class="caption wow fadeInUp" data-wow-delay="1.5s">
+                                            <a href="https://art.team-lab.cn/" class="button-normal">KNOW MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="slide-item clearfix" style="background-image: url(../static/img/2.jpg);">
+                        <div class="flex-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="caption-wrap">
+                                        <div class="caption wow fadeInUp" data-wow-delay="0.5s">
+                                            <h1> にながわ実花 Ninagawa Mika</h1>
+                                        </div>
+                                        <div class="caption wow fadeIn" data-wow-delay="1s">
+                                            <p>寝不足より、悪口より、退屈がわたしをブスにする。</p>
+                                        </div>
+                                        <div class="caption wow fadeInUp" data-wow-delay="1.5s">
+                                            <a href="https://mikaninagawa.com/cn/photography/" class="button-normal">KNOW MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide-item clearfix" style="background-image: url(../static/img/3.jpg);">
+                        <div class="flex-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="caption-wrap">
+                                        <div class="caption wow fadeInUp" data-wow-delay="0.5s">
+                                            <h1>くさまやよい Yayoi Kusama </h1>
+                                        </div>
+                                        <div class="caption wow fadeIn" data-wow-delay="1s">
+                                            <p>By obliterating one's individual self,one returns to the infinite universe</p>
+                                        </div>
+                                        <div class="caption wow fadeInUp" data-wow-delay="1.5s">
+                                            <a href="http://yayoi-kusama.jp/" class="button-normal">KNOW MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide-item clearfix" style="background-image: url(../static/img/1.jpg);">
+                        <div class="flex-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="caption-wrap">
+                                        <div class="caption wow fadeInUp" data-wow-delay="0.5s">
+                                            <h1>Alphonse Maria Mucha</h1>
+                                        </div>
+                                        <div class="caption wow fadeIn" data-wow-delay="1s">
+                                            <p>Life is apure flame, and we live by an invisible sun within us.</p>
+                                        </div>
+                                        <div class="caption wow fadeInUp" data-wow-delay="1.5s">
+                                            <a href="https://www.mucha.cz/en/" class="button-normal">KNOW MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+            <!-- SLIDER END -->
+
+            <!-- CONTENT START
+            ============================================= -->
+            <section id="content" class="clearfix">
+
+                <!-- SERVICES START
+                ============================================= -->
+                <div class="services with-bg">
+                    <div class="container">
+                        <div class="row">
+
+                            <!-- Service Quote -->
+                            <div class="email-quote clearfix">
+
+                            </div>
+                            <!-- Service Quote -->
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- SERVICES END -->
+
+
+
+            </section>
+            <!-- CONTENT END -->
+
+
+            </footer>
+            <!-- FOOTER END -->
+
+        </div>
+        <!-- MAIN WRAPPER END -->
+
+        <!-- Footer Scripts
+        ============================================= -->
+        <!-- External -->
+        <script type="text/javascript" src="{{url_for('static',filename='js/plugin.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='js/main.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static',filename='js/formcalculations.js')}}"></script>
+       </body>
+</html>
